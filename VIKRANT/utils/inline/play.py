@@ -72,7 +72,7 @@ def stream_markup_timer(_, chat_id, played, dur):
                 text="𝖮ᴡɴᴇʀ 🥀", url="https://t.me/II_SYNTAX_CODE_II",
             ),
             InlineKeyboardButton(
-                text="𝖲ᴜᴘᴘᴏʀᴛ 🥀", url="https://t.me/SYNTAX_SUPPORT_VIKRANT",
+                text="𝖲ᴜᴘᴘᴏʀᴛ 🥀", url="https://t.me/VIKRANT_WORLD",
             )
         ],
          [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -94,7 +94,7 @@ def stream_markup(_, chat_id):
                 text="𝖮𝗐𝗇𝖾𝗋🥀", url="https://t.me/II_SYNTAX_CODE_II",
             ),
             InlineKeyboardButton(
-                text="𝖲𝗎𝗉𝗉𝗈𝗋𝗍🥀", url="https://t.me/SYNTAX_SUPPORT_VIKRANT",
+                text="𝖲𝗎𝗉𝗉𝗈𝗋𝗍🥀", url="https://t.me/VIKRANT_WORLD",
             )
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -107,11 +107,11 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
-                callback_data=f"ALPHAPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
+                callback_data=f"VIKRANTPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
                 text=_["P_B_2"],
-                callback_data=f"ALPHAPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
+                callback_data=f"VIKRANTPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
             ),
         ],
         [
