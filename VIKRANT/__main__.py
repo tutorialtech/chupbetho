@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from VIKRANT import LOGGER, app, userbot
-from VIKRANT.core.call import Sona
+from VIKRANT.core.call import vikrant
 from VIKRANT.misc import sudo
 from VIKRANT.plugins import ALL_MODULES
 from VIKRANT.utils.database import get_banned_users, get_gbanned
@@ -38,9 +38,9 @@ async def init():
         importlib.import_module("VIKRANT.plugins" + all_module)
     LOGGER("VIKRANT.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await Sona.start()
+    await vikrant.start()
     try:
-        await Sona.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await vikrant.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("VIKRANT").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
@@ -48,7 +48,7 @@ async def init():
         exit()
     except:
         pass
-    await Sona.decorators()
+    await vikrant.decorators()
     LOGGER("VIKRANT").info(
         "JAKE VIKRANT @II_SYNTAX_CODE_II KO PAPA BOLDENA AB @SYNTAX_WORLD"
     )

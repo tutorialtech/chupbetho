@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from VIKRANT import YouTube, app
-from VIKRANT.core.call import Sona
+from VIKRANT.core.call import vikrant
 from VIKRANT.misc import db
 from VIKRANT.utils import AdminRightsCheck, seconds_to_min
 from VIKRANT.utils.inline import close_markup
@@ -56,7 +56,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
     if "index_" in file_path:
         file_path = playing[0]["vidid"]
     try:
-        await Sona.seek_stream(
+        await vikrant.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),

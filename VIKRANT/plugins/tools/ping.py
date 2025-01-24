@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from VIKRANT import app
-from VIKRANT.core.call import Sona
+from VIKRANT.core.call import vikrant
 from VIKRANT.utils import bot_sys_stats
 from VIKRANT.utils.decorators.language import language
 from VIKRANT.utils.inline import supp_markup
@@ -19,7 +19,7 @@ async def ping_com(client, message: Message, _):
         photo=PING_IMG_URL,
         caption=_["ping_1"].format(app.mention),
     )
-    pytgping = await Sona.ping()
+    pytgping = await vikrant.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(

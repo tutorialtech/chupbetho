@@ -5,7 +5,7 @@ from pyrogram.enums import ChatType
 
 import config
 from VIKRANT import app
-from VIKRANT.core.call import Sona, autoend
+from VIKRANT.core.call import vikrant, autoend
 from VIKRANT.utils.database import get_client, is_active_chat, is_autoend
 
 
@@ -59,7 +59,7 @@ async def auto_end():
                     continue
                 autoend[chat_id] = {}
                 try:
-                    await Sona.stop_stream(chat_id)
+                    await vikrant.stop_stream(chat_id)
                 except:
                     continue
                 try:

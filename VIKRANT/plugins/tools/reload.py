@@ -14,7 +14,7 @@ from pyrogram import filters
 load_dotenv()
 
 from VIKRANT import app
-from VIKRANT.core.call import Sona
+from VIKRANT.core.call import vikrant
 from VIKRANT.misc import db
 from VIKRANT.utils.database import get_assistant, get_authuser_names, get_cmode
 from VIKRANT.utils.decorators import ActualAdminCB, AdminActual, language
@@ -70,7 +70,7 @@ async def restartbot(client, message: Message, _):
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
-        await Sona.stop_stream_force(message.chat.id)
+        await vikrant.stop_stream_force(message.chat.id)
     except:
         pass
     userbot = await get_assistant(message.chat.id)
@@ -97,7 +97,7 @@ async def restartbot(client, message: Message, _):
             pass
         try:
             db[chat_id] = []
-            await Sona.stop_stream_force(chat_id)
+            await vikrant.stop_stream_force(chat_id)
         except:
             pass
     return await mystic.edit_text(_["reload_5"].format(app.mention))

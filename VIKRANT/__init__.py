@@ -1,4 +1,4 @@
-from VIKRANT.core.bot import Sona
+from VIKRANT.core.bot import vikrant
 from VIKRANT.core.dir import dirr
 from VIKRANT.core.git import git
 from VIKRANT.core.userbot import Userbot
@@ -11,7 +11,7 @@ git()
 dbb()
 heroku()
 
-app = Sona()
+app = vikrant()
 userbot = Userbot()
 
 
